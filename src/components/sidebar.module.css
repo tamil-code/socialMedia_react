@@ -1,0 +1,42 @@
+.close{
+    display: block;
+   
+}
+
+.open{
+    display: block;
+}
+.wrapper{
+    display: block;
+}
+@media screen and (max-width:480px){
+    .close{
+        position: relative;
+        left:-200px;
+    }
+    .open{
+        position:fixed;
+        top:55px; 
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: saturate(180%) blur(10px);
+        margin-top:0;
+        animation: sidebar .5s cubic-bezier(.175, .885,.32,1.275) forwards;
+    }
+
+   .wrapper{
+    position: fixed;
+   
+   }
+   @keyframes sidebar {
+     from{
+        left:-200px;
+        
+     }
+     to{
+        left: -4px;
+     }
+   }
+}
+/* 
+1:  */
